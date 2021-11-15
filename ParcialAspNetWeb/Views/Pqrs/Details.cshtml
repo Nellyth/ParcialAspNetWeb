@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Detalle del PQRS";
+}
+<h1>@ViewData["Title"]</h1>
+
+<style>
+    .row {
+        background: #f6f6f6;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .row2 {
+        background: #f6f6f6;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        padding: 10px;
+        width: 100%
+    }
+
+    .col {
+        float: left;
+        width: 50%
+    }
+</style>
+
+<div style="width: 100%">
+    <form style="width: 80%" method="post" action="/pqrs/Edit/@Model.idPqr">
+        <div class="row">
+            <div class="col">
+                <label for="pname">Pk:</label><br>
+                <input type="text" disabled id="pname" name="idPqr" value="@Model.idPqr"><br><br>
+            </div>
+
+            <div class="col">
+                <label for="gname">Grupo De Interes:</label><br>
+                <input type="text" id="gname" name="grupoDeInteres" value="@Model.grupoDeInteres"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="psname">Pais:</label><br>
+                <input type="text" id="psname" name="pais" value="@Model.pais"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="dname">Departamento:</label><br>
+                <input type="text" id="dname" name="departamento" value="@Model.departamento"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="cname">Ciudad:</label><br>
+                <input type="text" id="cname" name="ciudad" value="@Model.ciudad"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="fname">Fecha:</label><br>
+                <input type="text" id="fname" name="fecha" value="@Model.fecha"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="cname">Correo:</label><br>
+                <input type="text" id="cname" name="correo" value="@Model.correo"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="mname">Medio De Notificacion Para:</label><br>
+                <input type="text" id="mname" name="medioDeNotificacionPara" value="@Model.medioDeNotificacionPara"/><br><br>
+            </div>
+
+            <div class="row2">
+                <h3>Usuario</h3>
+                <br/>
+                <div class="col">
+                    <label for="pkusername">Pk:</label><br>
+                    <input type="text" id="pkusername" name="idUser" value="@Model.usuario.idUser" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="tiponame">Tipo Documento:</label><br>
+                    <input type="text" id="tiponame" name="tipoDocumento" value="@Model.usuario.tipoDocumento" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="docuname">Documento:</label><br>
+                    <input type="text" id="docuname" name="documento" value="@Model.usuario.documento" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="noname">Nombres:</label><br>
+                    <input type="text" id="noname" name="nombres" value="@Model.usuario.nombres" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="apename">Apellidos:</label><br>
+                    <input type="text" id="apename" name="apellidos" value="@Model.usuario.apellidos" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="telname">Telefono:</label><br>
+                    <input type="text" id="telname" name="telefono" value="@Model.usuario.telefono" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="genname">Genero:</label><br>
+                    <input type="text" id="genname" name="genero" value="@Model.usuario.genero" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="dirname">Direccion:</label><br>
+                    <input type="text" id="dirname" name="direccion" value="@Model.usuario.direccion" /><br><br>
+                </div>
+
+                <div class="col">
+                    <label for="barname">Barrio:</label><br>
+                    <input type="text" id="barname" name="barrio" value="@Model.usuario.barrio" /><br><br>
+                </div>
+            </div>
+
+            <div class="col">
+                <label for="aname">Asunto:</label><br>
+                <input type="text" id="aname" name="asunto" value="@Model.asunto"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="dsname">Descripcion:</label><br>
+                <input type="text" id="dsname" name="descripcion" value="@Model.descripcion"/><br><br>
+            </div>
+
+            <div class="col">
+                <label for="sname">Status:</label><br>
+                @if (Model.status != null)
+                {
+                    <input type="text" id="sname" name="status" value="@Model.status" /><br><br>
+                } else {
+                    <input type="text" id="sname" name="status" value="Pendiente" /><br><br>
+                }
+
+            </div>
+        </div>
+        
+        <div style="text-align: center; width: 100%; margin-top: 5%;">
+            <input type="submit" value="Actualizar" />
+        </div>
+    </form>
+</div>

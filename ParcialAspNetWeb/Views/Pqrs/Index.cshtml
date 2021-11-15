@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "PQRS";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table border="1" style="width:100%">
+    <tr>
+        <th>Pk</th>
+        <th>Grupo De Interes</th>
+        <th>Pais</th>
+        <th>Departamento</th>
+        <th>Ciudad</th>
+        <th>Fecha</th>
+        <th>Correo</th>
+        <th>Medio De Notificacion Para</th>
+        <th>Usuario</th>
+        <th>Asunto</th>
+        <th>Descripcion</th>
+        <th>Status</th>
+        <th>Eliminar</th>
+    </tr>
+    @foreach (var instance in Model)
+    {
+    <tr>
+        <td style="text-align: center">
+            <a asp-area="" asp-controller="pqrs" asp-action="Details" asp-route-id="@instance.idPqr">@instance.idPqr</a>
+        </td>
+        <td>@instance.grupoDeInteres</td>
+        <td>@instance.pais</td>
+        <td>@instance.departamento</td>
+        <td>@instance.ciudad</td>
+        <td>@instance.fecha</td>
+        <td>@instance.correo</td>
+        <td>@instance.medioDeNotificacionPara</td>
+        <td>@instance.usuario.nombres @instance.usuario.apellidos</td>
+        <td>@instance.asunto</td>
+        <td>@instance.descripcion</td>
+        @if (@instance.status != null)
+        {
+            <td>@instance.status</td>
+        }
+        else
+        {
+            <td>Pendiente</td>
+        }
+        <td>
+            <a asp-area="" asp-controller="pqrs" asp-action="Delete" asp-route-id="@instance.idPqr">Borrar</a>
+        </td>
+    </tr>
+    }
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcialAspNetWeb", "ParcialAspNetWeb\ParcialAspNetWeb.csproj", "{F06F63B6-C8C2-41A8-9D80-7C5773832B0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F06F63B6-C8C2-41A8-9D80-7C5773832B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F06F63B6-C8C2-41A8-9D80-7C5773832B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F06F63B6-C8C2-41A8-9D80-7C5773832B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F06F63B6-C8C2-41A8-9D80-7C5773832B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {283827F3-FF12-4F75-ADA9-86DFE34F9B30}
+	EndGlobalSection
+EndGlobal
